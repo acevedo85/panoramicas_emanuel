@@ -16,6 +16,7 @@ class GruposController extends Controller
     public function index()
     {
         $grupos = Grupo::paginate(10);
+        //return $grupos;
         return view('grupos.index', compact('grupos'));
     }
 
@@ -55,6 +56,7 @@ class GruposController extends Controller
         $grupo = Grupo::findOrFail($id);
       /*  $clientes = Cliente::paginate(10)
             ->where('grupo_id', $id);*/
+        //return $grupo->clientes->count();
         return view('/grupos.show', compact('grupo'));
     }
 

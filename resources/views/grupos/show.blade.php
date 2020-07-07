@@ -25,6 +25,8 @@
             </table>
         </div>
     </div>
+
+    @if($grupo->clientes->count() > 0)
     <div class="row">
         <div class="col-md-9 col-lg-offset-2">
             <div class="pull-left">
@@ -37,7 +39,7 @@
                     <th>Generacion</th>
                     <th>Acciones</th>
                 </tr>
-                @if($grupo->clientes->count() <0)
+                
                 @foreach($grupo->clientes as $cliente)
                     <tr class="active">
                         <td>{{$cliente->name}} {{$cliente->paterno}} {{$cliente->materno}}</td>
@@ -50,7 +52,7 @@
                     </tr>
                 @endforeach
                 @else
-                    <p>No hay clientes en este grupo aún.</p>
+                    
                     @endif
             </table>
         </div>

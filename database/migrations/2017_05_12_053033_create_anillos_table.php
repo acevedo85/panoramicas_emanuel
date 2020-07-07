@@ -14,8 +14,8 @@ class CreateAnillosTable extends Migration
     public function up()
     {
         Schema::create('anillos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('contrato_id');
+            $table->increments('id')->unsigned();
+            $table->integer('contrato_id')->unsigned();
             $table->foreign('contrato_id')->references('id')->on('contratos');
             $table->string('type');
             $table->string('model');

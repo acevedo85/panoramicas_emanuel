@@ -14,11 +14,11 @@ class CreateGastosTable extends Migration
     public function up()
     {
         Schema::create('gastos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->date('fecha');
             $table->string('descripcion');
             $table->float('cantidad');
-            $table->integer('user_id');
+            $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('clientes');
             $table->timestamps();
         });

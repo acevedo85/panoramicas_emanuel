@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-9 col-lg-offset-2">
             <div class="pull-left">
-                @if($grupos->count() < 0)
+                @if($grupos->count() > 0)
                 <h2 style="color: #e7bd42">Grupos</h2>
             </div>
             <div class="pull-right">

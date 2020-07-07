@@ -14,8 +14,8 @@ class CreateContratosTable extends Migration
     public function up()
     {
         Schema::create('contratos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('cliente_id');
+            $table->increments('id')->unsigned();
+            $table->integer('cliente_id')->unsigned();
             $table->foreign('cliente_id')->references('id')->on('clientes');
             $table->date('creado_en');
             $table->string('status');

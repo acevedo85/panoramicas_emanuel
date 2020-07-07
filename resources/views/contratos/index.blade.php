@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-9 col-lg-offset-2">
-                    @if($contratos->count() <0)
+                    @if($contratos->count() > 0)
                     <div class="pull-left">
                         <h2 style="color: #e7bd42">Contratos</h2>
                     </div>

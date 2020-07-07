@@ -31,7 +31,7 @@
                 </table>
             </div>
         </div>
-
+        @forelse($contrato->pedidos as $pedido)
         <div class="row">
             <div class="col-md-9 col-lg-offset-2">
                 <div class="pull-left">
@@ -52,7 +52,7 @@
                         <th>Acciones</th>
                         <th>Admin</th>
                     </tr>
-                    @forelse($contrato->pedidos as $pedido)
+                    
                         <tr class="active">
                             <td>{{$pedido->package}}</td>
                             <td>{{$pedido->model}}</td>
@@ -81,11 +81,12 @@
                             </td>
                         </tr>
                     @empty
-                        No existen pedidos
+                        
                     @endforelse
                 </table>
             </div>
         </div>
+        @forelse($contrato->anillos as $anillo)
         <div class="row">
             <div class="col-md-9 col-lg-offset-2">
                 <div class="pull-left">
@@ -100,7 +101,7 @@
                         <th>Acciones</th>
                         <th>Admin</th>
                     </tr>
-                    @forelse($contrato->anillos as $anillo)
+                    
                         <tr class="active">
                             <td>{{$anillo->type}}</td>
                             <td>{{$anillo->weight}}</td>
@@ -123,12 +124,12 @@
                             </td>
                         </tr>
                     @empty
-                        No existen anillos
+                    
                     @endforelse
                 </table>
             </div>
         </div>
-
+        @forelse($contrato->pagos as $pago)
         <div class="row">
             <div class="col-md-9 col-lg-offset-2">
                 <div class="pull-left">
@@ -141,7 +142,7 @@
                         <th>Acciones</th>
                         <th>Admin</th>
                     </tr>
-                    @forelse($contrato->pagos as $pago)
+                    
                         <tr class="active">
                             <td>{{$pago->date_pay}}</td>
                             <td>$ {{$pago->amount}}</td>
@@ -162,7 +163,7 @@
                             </td>
                         </tr>
                     @empty
-                        No existen pagos
+                        
                     @endforelse
                 </table>
             </div>

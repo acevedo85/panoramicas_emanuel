@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-9 col-lg-offset-2">
-            @if($clientes->count() <0)
+            @if($clientes->count() > 0)
             <div class="pull-left">
                 <h2 style="color: #e7bd42">Clientes</h2>
             </div>

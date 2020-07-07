@@ -14,7 +14,7 @@ class CreateEventosTable extends Migration
     public function up()
     {
         Schema::create('eventos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id')->unsigned();
             $table->string('nombre');
             $table->date('fecha');
             $table->time('hora');
