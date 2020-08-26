@@ -12,6 +12,6 @@ class Anillo extends Model
     }
 
     protected $fillable = [
-      'contrato_id', 'type', 'weight', 'size', 'cost'
+      'contrato_id', 'type', 'weight', 'size', 'cost', 'model'
     ];
 }

@@ -31,7 +31,7 @@
                                 <div class="col-xs-6">
                                     <div class="form-group">
                                         <label>Peso (gramos)</label>
-                                        <input type="number" class="form-control" name="weight">
+                                        <input type="number" class="form-control" name="weight" step="0.01">
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
@@ -40,15 +40,27 @@
                                         <input type="text" class="form-control" name="size">
                                     </div>
                                 </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label>Modelo</label>
+                                        <input type="text" class="form-control" name="model">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                </br>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-6">
                                     <div class="form-group">
-                                        <label>$</label>
+                                        <label>Costo $</label>
                                         <input type="number" name="cost">
                                     </div>
                                 </div>
                             </div>
+                            
                             <button type="submit" class="btn btn-primary pull-right">Crear</button>
                         </form>
 

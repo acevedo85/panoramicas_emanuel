@@ -43,6 +43,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label>Modelo</label>
+                                        <input type="text" class="form-control" name="size" value="{{$anillo->model}}">
+                                    </div>
+                                </div>
                             <div class="row">
                                 <div class="col-xs-6">
                                     <div class="form-group">

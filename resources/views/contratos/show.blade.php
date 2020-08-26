@@ -86,12 +86,13 @@
                 </table>
             </div>
         </div>
-        @forelse($contrato->anillos as $anillo)
+        @if($contrato->anillos->count() > 0)
         <div class="row">
             <div class="col-md-9 col-lg-offset-2">
                 <div class="pull-left">
                     <h2 style="color: #e7bd42">Anillos</h2>
                 </div>
+                @forelse($contrato->anillos as $anillo)
                 <table class="table table-bordered">
                     <tr class="danger">
                         <th>Tipo</th>
@@ -129,6 +130,7 @@
                 </table>
             </div>
         </div>
+        @endif
         @forelse($contrato->pagos as $pago)
         <div class="row">
             <div class="col-md-9 col-lg-offset-2">

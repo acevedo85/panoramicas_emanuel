@@ -12,6 +12,7 @@
                     <th>Tipo</th>
                     <th>Peso</th>
                     <th>Medida</th>
+                    <th>Modelo</th>
                     <th>Costo</th>
                     <th>Acciones</th>
                     <th>Admin</th>
@@ -21,6 +22,7 @@
                         <td>{{$anillo->type}}</td>
                         <td>{{$anillo->weight}}</td>
                         <td>{{$anillo->size}}</td>
+                        <td>{{$anillo->model}}</td>
                         <td>${{$anillo->cost}}</td>
                         <td>
                             <a class="btn btn-primary" href="/anillos/{{$anillo->id}}/edit">Editar </a>

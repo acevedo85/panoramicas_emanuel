@@ -31,6 +31,10 @@
                                 <p class="list-group-item-text">{{$anillo->size}}</p>
                             </li>
                             <li class="list-group-item">
+                                <h4 class="list-group-item-heading">Modelo</h4>
+                                <p class="list-group-item-text">{{$anillo->model}}</p>
+                            </li>
+                            <li class="list-group-item">
                                 <h4 class="list-group-item-heading">Costo</h4>
                                 <p class="list-group-item-text">${{$anillo->cost}}</p>
                             </li>

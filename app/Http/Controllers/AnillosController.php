@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Anillo;
+use App\Contrato;
+use App\Cliente;
+use App\Pago;
+use App\Pedido;
 use Illuminate\Http\Request;
 
 class AnillosController extends Controller
@@ -43,7 +47,25 @@ class AnillosController extends Controller
     public function store(Request $request)
     {
         $anillo = Anillo::create($request->all());
-        return view('/anillos.show', compact('anillo'));
+        //return $anillo;
+        $contrato = Contrato::findOrFail($anillo->contrato_id);
+        $id = $contrato->id;
+        $cliente = Cliente::findOrFail($contrato->cliente_id);
+        $pedidos = Pedido::all()
+            ->where('contrato_id', $id);
+        $anillos = Anillo::all()
+            ->where('contrato_id', $id);
+        $pagos = Pago::all()
+            ->where('contrato_id', $id);
+        $total_p = Pedido::all()
+            ->where('contrato_id', $id)
+            ->sum('cost');
+        $total_a = Anillo::all()
+            ->where('contrato_id', $id)
+            ->sum('cost');
+        $total = $total_a + $total_p;
+        return view('/contratos.show', compact('contrato', 'pedidos', 'anillos', 'pagos' , 'total' , 'cliente'));
+       // return view('/anillos.show', compact('anillo'));
     }
 
     /**
