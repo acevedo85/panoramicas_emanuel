@@ -16,25 +16,34 @@
 
                             <div class="form-group">
                                 <label for="nombre">Nombre</label>
-                                <input type="text" class="form-control" name="nombre" placeholder="Nombre del paquete">
+                                <input type="text" class="form-control" name="nombre" placeholder="Nombre del paquete" required>
                             </div>
                                     <div class="form-group">
-                                        <label for="career">Descripción</label>
-                                        <input type="text" class="form-control" name="descripcion" placeholder="Descripción del paquete">
+                                        <label for="descripcion">Descripción</label>
+                                        <input type="text" class="form-control" name="descripcion" placeholder="Descripción del paquete" required>
                                     </div>
                             <div class="row">
                                 <div class="col-xs-4">
                                     <div class="form-group">
-                                        <label for="school">Precio</label>
-                                        <input type="number" class="form-control" name="precio">
+                                        <label for="precio">Precio</label>
+                                        <input type="number" class="form-control" name="precio" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="segunda">Segunda Panoramica?</label>
+                                        <input type="checkbox" id="segunda" name="segunda">
                                     </div>
                                 </div>
                             </div>
                             <row>
-                                <p>*Todos los campos son requeridos. En caso de no tener la información, poner "NA"</p>
-                                <button type="submit" class="btn btn-danger pull-right">Agregar</button>
+                                <div>*Todos los campos son requeridos. En caso de no tener la información, poner "NA"</div>
+                                </br>
+                                <button type="submit" class="btn btn-success pull-right">Agregar</button>
                             </row>
                         </form>
+
+                        <a href="{{ url()->previous() }}">Cancelar</a>
 
                     </div>
                 </div>

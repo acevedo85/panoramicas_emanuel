@@ -17,6 +17,7 @@ class CreatePaquetesTable extends Migration
             $table->increments('id')->unsigned();
             $table->string('nombre');
             $table->string('descripcion');
+            $table->boolean('segunda');
             $table->float('precio');
             $table->timestamps();
         });

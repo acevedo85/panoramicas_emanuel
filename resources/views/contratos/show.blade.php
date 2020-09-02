@@ -7,7 +7,7 @@
                 <div class="pull-left">
                     <h2 style="color: #e7bd42">Contrato {{$contrato->id}}</h2>
                 </div>
-                <table class="table table-bordered">
+                <table class="table table-responsive table-bordered">
                     <tr class="danger">
                         <th>Recibido</th>
                         <th>Cliente</th>
